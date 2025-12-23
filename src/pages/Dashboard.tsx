@@ -13,7 +13,7 @@ export default function Dashboard() {
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-main-800">Dashboard</p>
         <h1 className="text-3xl font-semibold text-main-600 sm:text-4xl">Credential dashboard</h1>
         <p className="max-w-2xl text-base text-main-800">
-          Login completed successfully. Below is the credential model for this agent.
+          Login completed successfully. Below is the credential
         </p>
       </header>
 
@@ -52,6 +52,42 @@ export default function Dashboard() {
               ))}
             </div>
           </div>
+        </div>
+          <div className="flex justify-start">
+              <button
+                  type="button"
+                  className="rounded-full border border-main-1100/60 bg-main-900/70 px-6 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-main-600 transition hover:bg-main-900/90"
+              >
+                  Perform Transaction on behalf of Empeiria
+              </button>
+          </div>
+      </section>
+
+      <section className="grid gap-6 rounded-3xl border border-main-1100/70 bg-main-1200/80 p-box-100 shadow-[0_32px_80px_rgba(0,0,0,0.35)] animate-fade-up-delay">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-main-800">Transaction History</p>
+          <h2 className="mt-2 text-2xl font-semibold text-main-600">Transaction History</h2>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl border border-main-1100/60">
+          <table className="w-full text-left text-sm text-main-800">
+            <thead className="bg-main-900/70 text-xs font-semibold uppercase tracking-[0.2em] text-main-600">
+              <tr>
+                <th className="px-4 py-3">ID</th>
+                <th className="px-4 py-3">Date</th>
+                <th className="px-4 py-3">Receiver</th>
+                <th className="px-4 py-3">Amount</th>
+                <th className="px-4 py-3">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-4 py-4 text-main-800/70" colSpan={5}>
+                  No transactions yet.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>
