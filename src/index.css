@@ -12,3 +12,36 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0f152b;
 }
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 700ms ease forwards;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 900ms ease 140ms forwards;
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
